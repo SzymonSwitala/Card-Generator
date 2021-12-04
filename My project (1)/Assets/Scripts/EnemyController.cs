@@ -33,6 +33,10 @@ public class EnemyController : MonoBehaviour
         {
             hpPoint = maxHpPoint;
         }
+        if (hpPoint < 0)
+        {
+            hpPoint = 0;
+        }
         UpdateStats();
     }
     public void addMana(int mana)
@@ -42,11 +46,19 @@ public class EnemyController : MonoBehaviour
         {
             manaPoint = maxManaPoint;
         }
+        if ( manaPoint < 0)
+        {
+            manaPoint = 0;
+        }
         UpdateStats();
     }
     public void addSpeed(int _speed)
     {
         speed += _speed;
+        if (speed<0)
+        {
+            speed = 0;
+        }
         UpdateStats();
     }
 

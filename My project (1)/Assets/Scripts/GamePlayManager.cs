@@ -18,6 +18,11 @@ public class GamePlayManager : MonoBehaviour
     }
     public void Use()
     {
+        if (currentCard==null)
+        {
+            return;
+        }
+        ui_cardController.PlayUseAnimation();
         enemyController.addHp(currentCard.effect.addHealPoint);
         enemyController.addMana(currentCard.effect.addMana);
         enemyController.addSpeed(currentCard.effect.addSpeed);

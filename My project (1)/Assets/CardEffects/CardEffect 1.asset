@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa82879bbd84784189f6ad844eb1e68, type: 3}
   m_Name: CardEffect 1
   m_EditorClassIdentifier: 
-  addHealPoint: -2
-  addMana: 1
-  addSpeed: -2
+  addHealPoint: 1
+  addMana: -10
+  addSpeed: 1
