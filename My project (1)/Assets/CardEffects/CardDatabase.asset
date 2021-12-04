@@ -15,5 +15,12 @@ MonoBehaviour:
   titles:
   - Kula ognia
   - Leczenie
-  descriptions: []
-  images: []
+  descriptions:
+  - a
+  - b
+  images:
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  cardEffect:
+  - {fileID: 11400000, guid: 691c12e93c56bfd4eb394da8ee0cd734, type: 2}
+  - {fileID: 11400000, guid: c0bd5137bce3e68439df5b8d7c696cd8, type: 2}
