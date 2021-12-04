@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class CardController : MonoBehaviour
+public class UI_CardController : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI title;
@@ -22,8 +22,9 @@ public class CardController : MonoBehaviour
     {
         image.sprite = newImage;
     }
-    public void SetEffectDesctiption(string newEffectDesctiption)
+  
+    public void SetEffectDescription(CardEffect effect)
     {
-        effectDesctiption.text = newEffectDesctiption;
+        effectDesctiption.text = "HP:" + effect.addHealPoint + "\nMana:" + effect.addMana + "\nSpeed:" + effect.addSpeed;
     }
 }

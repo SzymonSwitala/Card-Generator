@@ -27,16 +27,29 @@ public class EnemyController : MonoBehaviour
     }
     public void addHp(int hp)
     {
+        
         hpPoint += hp;
+        if (hpPoint>maxHpPoint)
+        {
+            hpPoint = maxHpPoint;
+        }
+        UpdateStats();
     }
     public void addMana(int mana)
     {
-        hpPoint += mana;
+        manaPoint += mana;
+        if (manaPoint>maxManaPoint)
+        {
+            manaPoint = maxManaPoint;
+        }
+        UpdateStats();
     }
-    public void addSpeed(int speed)
+    public void addSpeed(int _speed)
     {
-        speed += this.speed;
+        speed += _speed;
+        UpdateStats();
     }
+
 
     private void UpdateStats()
     {
