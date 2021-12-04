@@ -8,6 +8,10 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] UI_CardController ui_cardController;
     [SerializeField] EnemyController enemyController;
     [SerializeField] Card currentCard;
+    private void Start()
+    {
+        GenerateRandomCard();
+    }
     public void Generate()
     {
         GenerateRandomCard();
