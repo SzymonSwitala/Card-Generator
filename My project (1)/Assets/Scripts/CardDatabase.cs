@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class CardDatabase : ScriptableObject
 {
     
-    [SerializeField] string[] titles;
-    [SerializeField] string[] descriptions;
-    [SerializeField] Image[] images;
+    public string[] titles;
+    public string[] descriptions;
+    public Sprite[] images;
+    public CardEffect[] cardEffect;
 }

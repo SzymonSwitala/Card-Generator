@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038d1e75888b61745ad97f50734c8443, type: 3}
   m_Name: CardDatabase
   m_EditorClassIdentifier: 
-  titles: []
+  titles:
+  - Kula ognia
+  - Leczenie
   descriptions: []
   images: []
