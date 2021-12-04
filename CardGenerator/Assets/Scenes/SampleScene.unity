@@ -273,6 +273,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121650940}
   m_CullTransparentMesh: 1
+--- !u!95 &167616204 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6751146193091240863, guid: 5251cbdda4d82bf4b955c5d3af134436, type: 3}
+  m_PrefabInstance: {fileID: 975299852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &241261406
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +445,7 @@ MonoBehaviour:
   ui_cardController: {fileID: 975299854}
   enemyController: {fileID: 480721672}
   currentCard: {fileID: 0}
+  savedCards: []
 --- !u!4 &392100919
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2778124128542067711, guid: 5251cbdda4d82bf4b955c5d3af134436, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 167616204}
     - target: {fileID: 4185080030447687347, guid: 5251cbdda4d82bf4b955c5d3af134436, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

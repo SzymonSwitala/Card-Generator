@@ -8,6 +8,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] UI_CardController ui_cardController;
     [SerializeField] EnemyController enemyController;
     [SerializeField] Card currentCard;
+    [SerializeField] List<Card> savedCards;
     private void Start()
     {
         GenerateRandomCard();
@@ -18,7 +19,7 @@ public class GamePlayManager : MonoBehaviour
     }
     public void Save()
     {
-
+        savedCards.Add(currentCard);
     }
     public void Use()
     {

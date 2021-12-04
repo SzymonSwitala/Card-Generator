@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baa82879bbd84784189f6ad844eb1e68, type: 3}
-  m_Name: CardEffect 2
+  m_Name: CardEffect 1
   m_EditorClassIdentifier: 
-  addHealPoint: 0
+  addHealPoint: 10
   addMana: 0
   addSpeed: 0

@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: CardDatabase
   m_EditorClassIdentifier: 
   titles:
-  - Kula ognia
-  - Leczenie
+  - Kretoszczur
+  - Cieniostwor
+  - Scierwojad
+  - Polna Bestia
+  - Smok
   descriptions:
-  - a
-  - b
+  - Opis karty
+  - Auuu-Auuu
+  - Magiczna karta
+  - Wrrr-Wrrrr Wrrr-Wrrrr
+  - Witaj przyjacielu
   images:
   - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   cardEffect:
   - {fileID: 11400000, guid: 691c12e93c56bfd4eb394da8ee0cd734, type: 2}
   - {fileID: 11400000, guid: c0bd5137bce3e68439df5b8d7c696cd8, type: 2}
+  - {fileID: 11400000, guid: 7cdb348bee4e24e479ffdf9b0f992743, type: 2}
+  - {fileID: 11400000, guid: a31d3a856f813eb439e13c315126b977, type: 2}
+  - {fileID: 11400000, guid: 71cfdb5987ef4a24b8303dd63fdc0010, type: 2}
