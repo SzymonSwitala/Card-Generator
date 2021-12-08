@@ -8,7 +8,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] UI_CardController ui_cardController;
     [SerializeField] EnemyController enemyController;
     [SerializeField] Card currentCard;
-    [SerializeField] SavedCardContrroller savedCardContrroller;
+    [SerializeField] SavedCardsController savedCardsContrroller;
     private void Start()
     {
         GenerateRandomCard();
@@ -20,7 +20,7 @@ public class GamePlayManager : MonoBehaviour
     }
     public void Save()
     {
-        savedCardContrroller.AddCard(currentCard);
+        savedCardsContrroller.AddCard(currentCard);
         GenerateRandomCard(); 
 
     }
@@ -41,19 +41,31 @@ public class GamePlayManager : MonoBehaviour
         
         int randomTitleIndex = Random.Range(0,cardDatabase.titles.Length);
         string randomTitle = cardDatabase.titles[randomTitleIndex];
-        ui_cardController.SetTitle(randomTitle);
+    
 
         int randomDescriptionIndex = Random.Range(0, cardDatabase.descriptions.Length);
         string randomDescription = cardDatabase.descriptions[randomDescriptionIndex];
-        ui_cardController.SetDesctiption(randomDescription);
+     
 
         int randomImageIndex = Random.Range(0,cardDatabase.images.Length);
         Sprite randomImage = cardDatabase.images[randomImageIndex];
-        ui_cardController.SetImage(randomImage);
+  
 
         int randomCardEffectIndex = Random.Range(0, cardDatabase.cardEffect.Length);
         CardEffect randomCardEffect = cardDatabase.cardEffect[randomCardEffectIndex];
-        ui_cardController.SetEffectDescription(randomCardEffect);
-        currentCard = new Card(randomTitle,randomDescription,randomImage,randomCardEffect);
+    
+       Card newCard = new Card(randomTitle,randomDescription,randomImage,randomCardEffect);
+        SetNewCurrentCard(newCard);
+    }
+    public void SetNewCurrentCard(Card newCard)
+    {
+
+        currentCard = newCard;
+        ui_cardController.SetNewCard(
+                newCard.title,
+                newCard.description,
+                newCard.image,
+                newCard.effect);
+
     }
 }
