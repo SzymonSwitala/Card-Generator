@@ -25,11 +25,11 @@ MonoBehaviour:
   - Wrrr-Wrrrr Wrrr-Wrrrr
   - Witaj przyjacielu
   images:
-  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 06736dd871518ce43972ad81d5396157, type: 3}
+  - {fileID: 21300000, guid: e174b015524431f45ba4055ae9e68fbe, type: 3}
+  - {fileID: 21300000, guid: 6f1a3a3765b477547a452a7b38da55d3, type: 3}
+  - {fileID: 21300000, guid: 36af1aa418246f44d846ea772d968b74, type: 3}
+  - {fileID: 21300000, guid: 577534bf9ca06cb48a71ad0326f471ee, type: 3}
   cardEffect:
   - {fileID: 11400000, guid: 691c12e93c56bfd4eb394da8ee0cd734, type: 2}
   - {fileID: 11400000, guid: c0bd5137bce3e68439df5b8d7c696cd8, type: 2}

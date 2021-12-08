@@ -9,10 +9,12 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] EnemyController enemyController;
     [SerializeField] Card currentCard;
     [SerializeField] SavedCardsController savedCardsContrroller;
+    private bool isUsing = false;
     private void Start()
     {
         GenerateRandomCard();
     }
+  
     public void Generate()
     {
         GenerateRandomCard();
@@ -21,40 +23,55 @@ public class GamePlayManager : MonoBehaviour
     public void Save()
     {
         savedCardsContrroller.AddCard(currentCard);
-        GenerateRandomCard(); 
+        GenerateRandomCard();
 
     }
     public void Use()
     {
-        if (currentCard==null)
+
+        if (!isUsing)
         {
-            return;
+            StartCoroutine(UseCoroutine());
+        }
+
+
+    }
+    public IEnumerator UseCoroutine()
+    {
+        isUsing = true;
+        if (currentCard == null)
+        {
+            yield return null;
         }
         ui_cardController.PlayUseAnimation();
+        yield return new WaitForSeconds(0.5f);
         enemyController.addHp(currentCard.effect.addHealPoint);
         enemyController.addMana(currentCard.effect.addMana);
         enemyController.addSpeed(currentCard.effect.addSpeed);
+        
         GenerateRandomCard();
+        isUsing = false;
     }
     private void GenerateRandomCard()
     {
-        
-        int randomTitleIndex = Random.Range(0,cardDatabase.titles.Length);
+
+        int randomTitleIndex = Random.Range(0, cardDatabase.titles.Length);
         string randomTitle = cardDatabase.titles[randomTitleIndex];
-    
+
 
         int randomDescriptionIndex = Random.Range(0, cardDatabase.descriptions.Length);
         string randomDescription = cardDatabase.descriptions[randomDescriptionIndex];
-     
 
-        int randomImageIndex = Random.Range(0,cardDatabase.images.Length);
+
+        int randomImageIndex = Random.Range(0, cardDatabase.images.Length);
         Sprite randomImage = cardDatabase.images[randomImageIndex];
-  
+
 
         int randomCardEffectIndex = Random.Range(0, cardDatabase.cardEffect.Length);
         CardEffect randomCardEffect = cardDatabase.cardEffect[randomCardEffectIndex];
-    
-       Card newCard = new Card(randomTitle,randomDescription,randomImage,randomCardEffect);
+        GameObject gameObject = new GameObject();
+        Card newCard = gameObject.AddComponent<Card>();
+        newCard.CreateCard(randomTitle, randomDescription, randomImage, randomCardEffect);
         SetNewCurrentCard(newCard);
     }
     public void SetNewCurrentCard(Card newCard)
