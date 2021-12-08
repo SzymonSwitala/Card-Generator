@@ -8,7 +8,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] UI_CardController ui_cardController;
     [SerializeField] EnemyController enemyController;
     [SerializeField] Card currentCard;
-    [SerializeField] List<Card> savedCards;
+    [SerializeField] SavedCardContrroller savedCardContrroller;
     private void Start()
     {
         GenerateRandomCard();
@@ -16,10 +16,13 @@ public class GamePlayManager : MonoBehaviour
     public void Generate()
     {
         GenerateRandomCard();
+
     }
     public void Save()
     {
-        savedCards.Add(currentCard);
+        savedCardContrroller.AddCard(currentCard);
+        GenerateRandomCard(); 
+
     }
     public void Use()
     {
@@ -31,6 +34,7 @@ public class GamePlayManager : MonoBehaviour
         enemyController.addHp(currentCard.effect.addHealPoint);
         enemyController.addMana(currentCard.effect.addMana);
         enemyController.addSpeed(currentCard.effect.addSpeed);
+        GenerateRandomCard();
     }
     private void GenerateRandomCard()
     {

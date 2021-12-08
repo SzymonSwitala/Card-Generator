@@ -32,4 +32,13 @@ public class UI_CardController : MonoBehaviour
     {
         anim.SetTrigger("play");
     }
+
+    public void SetNewCard(string newTitle, string newDesctiption, Sprite newImage, CardEffect effect)
+    {
+        title.text = newTitle;
+        description.text = newDesctiption;
+        image.sprite = newImage;
+        effectDesctiption.text = "HP:" + effect.addHealPoint + "\nMana:" + effect.addMana + "\nSpeed:" + effect.addSpeed;
+    }
 }
+
